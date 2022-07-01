@@ -20,6 +20,6 @@ mongoose.connect('mongodb://yeshua:yeshua2@ac-a8gqmio-shard-00-00.ypwvpkm.mongod
     { useNewUrlParser: true }, (err, res) => {
     err && console.log("Error conectando a la base de datos");
     app.listen(port, () => {
-        console.log("Servidor corriendo en http://localhost:4000");
+        console.log(`Servidor corriendo en ${app.get('port')}`);
     });
 });
